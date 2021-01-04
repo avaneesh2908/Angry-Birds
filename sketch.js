@@ -36,17 +36,15 @@ function setup(){
     log4 = new Log(760,120,150, PI/7);
     log5 = new Log(870,120,150, -PI/7);
 
-    bird = new Bird(100,100);
+    bird = new Bird(200,50);
 
-    slingshot = new Slingshot(bird.body,{x: 200,y: 100});
+    slingshot = new Slingshot(bird.body,{x: 200,y: 50});
 }
 
 function draw(){
     background(backgroundImg);
     Engine.update(engine);
-    console.log(box2.body.position.x);
-    console.log(box2.body.position.y);
-    console.log(box2.body.angle);
+
     box1.display();
     box2.display();
     ground.display();
